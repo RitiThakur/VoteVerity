@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vote Varity - Blockchain Voting System</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <h1>Vote Varity</h1>
+      <p>Your Secure Blockchain-Based Voting Platform</p>
+      <button id="connectWalletButton">Connect Wallet</button>
+      <div id="walletStatus"></div>
+    </header>
+
+    <!-- Voting Section -->
+    <section id="votingSection" class="hidden">
+      <h2>Cast Your Vote</h2>
+      <div id="candidates">
+        <label>
+          <input type="radio" name="candidate" value="Candidate 1" /> Candidate
+          1
+        </label>
+        <label>
+          <input type="radio" name="candidate" value="Candidate 2" /> Candidate
+          2
+        </label>
+        <label>
+          <input type="radio" name="candidate" value="Candidate 3" /> Candidate
+          3
+        </label>
+      </div>
+      <button id="voteButton">Submit Vote</button>
+      <div id="voteStatus"></div>
+    </section>
+
+    <!-- Transaction Status Section -->
+    <section id="transactionStatusSection" class="hidden">
+      <h2>Transaction Status</h2>
+      <p id="transactionStatus">Transaction Pending...</p>
+    </section>
+
+    <!-- Vote Receipt Section -->
+    <section id="receiptSection" class="hidden">
+      <h2>Vote Receipt</h2>
+      <p>Your vote has been successfully recorded.</p>
+      <p>Transaction Hash: <span id="transactionHash"></span></p>
+      <a id="explorerLink" href="#" target="_blank"
+        >View on Blockchain Explorer</a
+      >
+    </section>
+
+    <!-- Connect Wallet Modal -->
+    <div id="walletModal" class="modal hidden">
+      <div class="modal-content">
+        <span class="close-button" id="closeModal">&times;</span>
+        <h2>Connect Your Wallet</h2>
+        <p>
+          Please connect your Web3 wallet to start voting securely on Vote
+          Varity.
+        </p>
+        <button id="confirmConnectWallet">Connect with MetaMask</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
